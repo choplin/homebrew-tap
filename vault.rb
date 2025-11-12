@@ -5,21 +5,21 @@
 class Vault < Formula
   desc "vault.md - A knowledge vault for AI-assisted development"
   homepage "https://github.com/choplin/vault.md"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/choplin/vault.md/releases/download/v0.1.0/vault.md_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "7cd92289a9aed559cb8c610902159997e1ac8c074fe142faf00bd9eb5ab80b83"
+      url "https://github.com/choplin/vault.md/releases/download/v0.2.0/vault.md_0.2.0_Darwin_x86_64.tar.gz"
+      sha256 "603705ceb02fc88698f44b54488d18ebb59b1d4361dacaef6153770f50a43381"
 
       def install
         bin.install "vault"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/choplin/vault.md/releases/download/v0.1.0/vault.md_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "85c532ac9ccf42581cf51b195b683b1b86be909e1cb94a66f3108121f07c6cf5"
+      url "https://github.com/choplin/vault.md/releases/download/v0.2.0/vault.md_0.2.0_Darwin_arm64.tar.gz"
+      sha256 "59ce8c39dde48d7dd05fb49d142cb05f1cea16a18e2df950d431f18d75aadc65"
 
       def install
         bin.install "vault"
@@ -29,15 +29,15 @@ class Vault < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/choplin/vault.md/releases/download/v0.1.0/vault.md_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "492dc7f2f081bfde75dee0603d57cdb8da0f4dfeb8a9469f3a92cd2471983feb"
+      url "https://github.com/choplin/vault.md/releases/download/v0.2.0/vault.md_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "9b55eed46d6e410697038d65966033f4e84eb49c2f82f5092ea7179ee28adbb2"
       def install
         bin.install "vault"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/choplin/vault.md/releases/download/v0.1.0/vault.md_0.1.0_Linux_arm64.tar.gz"
-      sha256 "14da904f6e6d883477921c4482ffb876e5c70d34bbcf9aa9c120733b29cae50f"
+      url "https://github.com/choplin/vault.md/releases/download/v0.2.0/vault.md_0.2.0_Linux_arm64.tar.gz"
+      sha256 "7b2473af699fd6552f9413e6f4a67c15866d3c825856a73cf565579edd25ee3f"
       def install
         bin.install "vault"
       end
