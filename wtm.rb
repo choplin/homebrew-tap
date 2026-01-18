@@ -5,21 +5,21 @@
 class Wtm < Formula
   desc "Minimal git worktree management tool"
   homepage "https://github.com/choplin/wtm"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/choplin/wtm/releases/download/v0.5.0/wtm_0.5.0_Darwin_x86_64.tar.gz"
-      sha256 "d855044624e5b1164ec7e23080b681b248141d1cfa5cf5d187e7e1926ddfd4c7"
+      url "https://github.com/choplin/wtm/releases/download/v0.6.0/wtm_0.6.0_Darwin_x86_64.tar.gz"
+      sha256 "2441b56d8edd38b9ad33a646dd6485b454a968f23af0800f42c62a9e2b79e4f9"
 
       def install
         bin.install "wtm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/choplin/wtm/releases/download/v0.5.0/wtm_0.5.0_Darwin_arm64.tar.gz"
-      sha256 "1c7ec749264a644c3ea865ca315591cde728eb24c6914d2b23744a4039e9238e"
+      url "https://github.com/choplin/wtm/releases/download/v0.6.0/wtm_0.6.0_Darwin_arm64.tar.gz"
+      sha256 "62b3a98654beb591afa99b4142f5628cc787538dde85f4a4b23d646f92bd6c32"
 
       def install
         bin.install "wtm"
@@ -29,15 +29,15 @@ class Wtm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/choplin/wtm/releases/download/v0.5.0/wtm_0.5.0_Linux_x86_64.tar.gz"
-      sha256 "e7c949bae57fef48e20a776713e04fe013982993cf970b7c7d5dd2a726736e25"
+      url "https://github.com/choplin/wtm/releases/download/v0.6.0/wtm_0.6.0_Linux_x86_64.tar.gz"
+      sha256 "61b8e26a30cfacb7c29feb11b34a430a7a7748d11a9172bccc1096df32726b52"
       def install
         bin.install "wtm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/choplin/wtm/releases/download/v0.5.0/wtm_0.5.0_Linux_arm64.tar.gz"
-      sha256 "21be5853f3ccd05f8aa16906d87b3d111e6cf3ba5a03648e727751928daecd14"
+      url "https://github.com/choplin/wtm/releases/download/v0.6.0/wtm_0.6.0_Linux_arm64.tar.gz"
+      sha256 "13289d0c415d13939e5de201396a8dd4a5ca7764fe0d491e90ca98644402abf4"
       def install
         bin.install "wtm"
       end
