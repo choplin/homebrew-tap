@@ -5,24 +5,24 @@
 class Wtm < Formula
   desc "Minimal git worktree management tool"
   homepage "https://github.com/choplin/wtm"
-  version "0.6.1"
+  version "0.8.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/choplin/wtm/releases/download/v0.6.1/wtm_0.6.1_Darwin_x86_64.tar.gz"
-      sha256 "55269c4da28f79c3c7d6c0cbbaff29a2d8246dadff78c703f3a1021c8e6963fd"
+      url "https://github.com/choplin/wtm/releases/download/v0.8.0/wtm_0.8.0_Darwin_x86_64.tar.gz"
+      sha256 "9652cadd03fb92f3f0aeeb2c69d2c03891c80358d016263a3183658f9eace3a3"
 
-      def install
+      define_method(:install) do
         bin.install "wtm"
         bin.install_symlink "wtm" => "git-wtm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/choplin/wtm/releases/download/v0.6.1/wtm_0.6.1_Darwin_arm64.tar.gz"
-      sha256 "8ad805f3be9a740e298574a2fbf0e66c1178c37384732e4769c8cd74839856d1"
+      url "https://github.com/choplin/wtm/releases/download/v0.8.0/wtm_0.8.0_Darwin_arm64.tar.gz"
+      sha256 "d49f5dab9f235cd5bbb84c9083ff7133fdf1b4952024a63ee3fa2712405c5b02"
 
-      def install
+      define_method(:install) do
         bin.install "wtm"
         bin.install_symlink "wtm" => "git-wtm"
       end
@@ -31,17 +31,17 @@ class Wtm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/choplin/wtm/releases/download/v0.6.1/wtm_0.6.1_Linux_x86_64.tar.gz"
-      sha256 "fcabf4713a9723dd8598e7d4119678d3f37cf5eabe3820db8e33034359dc76ea"
-      def install
+      url "https://github.com/choplin/wtm/releases/download/v0.8.0/wtm_0.8.0_Linux_x86_64.tar.gz"
+      sha256 "4b9ef96aff44eb6bb464f1ea3950c962fb88685c42958a5bb4ca2115217b6e7a"
+      define_method(:install) do
         bin.install "wtm"
         bin.install_symlink "wtm" => "git-wtm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/choplin/wtm/releases/download/v0.6.1/wtm_0.6.1_Linux_arm64.tar.gz"
-      sha256 "1a10b03329168ffa2996eb8eb1e753311b6cd5256477644a9e1850d1fcd8fe81"
-      def install
+      url "https://github.com/choplin/wtm/releases/download/v0.8.0/wtm_0.8.0_Linux_arm64.tar.gz"
+      sha256 "e5a2e992279a1a515bc8a531d696d513df566d26b01e47323436f222c047a507"
+      define_method(:install) do
         bin.install "wtm"
         bin.install_symlink "wtm" => "git-wtm"
       end
