@@ -5,13 +5,13 @@
 class Wtm < Formula
   desc "Minimal git worktree management tool"
   homepage "https://github.com/choplin/wtm"
-  version "0.10.0"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/choplin/wtm/releases/download/v0.10.0/wtm_0.10.0_Darwin_x86_64.tar.gz"
-      sha256 "f770580428ee0fa690442a3b96d4b3dcc8fc7d344a7ebc2f79cabf16566a1b6e"
+      url "https://github.com/choplin/wtm/releases/download/v0.11.0/wtm_0.11.0_Darwin_x86_64.tar.gz"
+      sha256 "870771c9c8335d583689ab84115fbb62a195add6c851632e3659036d6a3ea25a"
 
       define_method(:install) do
         bin.install "wtm"
@@ -19,8 +19,8 @@ class Wtm < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/choplin/wtm/releases/download/v0.10.0/wtm_0.10.0_Darwin_arm64.tar.gz"
-      sha256 "0081feeb19a41ac40763013fc40dedc8b5e76644bbf16e3499c8fdb6f69c5e89"
+      url "https://github.com/choplin/wtm/releases/download/v0.11.0/wtm_0.11.0_Darwin_arm64.tar.gz"
+      sha256 "692ba743ee05d5bf21e3ae47f5222a245785d24c3e6f180533e5523213126291"
 
       define_method(:install) do
         bin.install "wtm"
@@ -31,16 +31,16 @@ class Wtm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/choplin/wtm/releases/download/v0.10.0/wtm_0.10.0_Linux_x86_64.tar.gz"
-      sha256 "97ab11e382ba54690332952980877c305f12dc8c4d1c794e3fa7fefbbe4cefc0"
+      url "https://github.com/choplin/wtm/releases/download/v0.11.0/wtm_0.11.0_Linux_x86_64.tar.gz"
+      sha256 "b0f6775a0151689c202157e9eddc3b692de0a1aee7e680b28c8a30fed99b7d0e"
       define_method(:install) do
         bin.install "wtm"
         bin.install_symlink "wtm" => "git-wtm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/choplin/wtm/releases/download/v0.10.0/wtm_0.10.0_Linux_arm64.tar.gz"
-      sha256 "d7c37cdc0aaab43eb0292f3886099b80dfcd03433e46bdb6709c3b0b59048b9a"
+      url "https://github.com/choplin/wtm/releases/download/v0.11.0/wtm_0.11.0_Linux_arm64.tar.gz"
+      sha256 "b0cc33e8a05c10f2626e8a284604f93c9d3c0833111755c350cbfebbbc3558d9"
       define_method(:install) do
         bin.install "wtm"
         bin.install_symlink "wtm" => "git-wtm"
