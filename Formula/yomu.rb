@@ -1,27 +1,34 @@
 class Yomu < Formula
   desc "A terminal Markdown reader with rich image, table, and math rendering"
   homepage "https://github.com/choplin/yomu"
-  version "0.1.0"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/choplin/yomu/releases/download/v0.1.0/yomu-aarch64-apple-darwin.tar.xz"
-      sha256 "6c55c7885ad01a37fec71f3f1a68c79c2a870b1505f1543cc258dca9295d734c"
+      url "https://github.com/choplin/yomu/releases/download/v0.2.0/yomu-aarch64-apple-darwin.tar.xz"
+      sha256 "0275b534fc98b346b93fb78ab4f654fc257eb15b8d185866aba39d232b8ba192"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/choplin/yomu/releases/download/v0.1.0/yomu-x86_64-apple-darwin.tar.xz"
-      sha256 "30d70e266bc2f3d23c3c3819ed668dde29e07080d4fbcff10bded356e54edd46"
+      url "https://github.com/choplin/yomu/releases/download/v0.2.0/yomu-x86_64-apple-darwin.tar.xz"
+      sha256 "edad79f9f363159b459bd21247134a4d614bc8fbedd871c19337fe16e49aa092"
     end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/choplin/yomu/releases/download/v0.1.0/yomu-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "3991f369edb1115a674819bc5b2cbc2480747c8536377570c9fa63eea3159b53"
+  if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/choplin/yomu/releases/download/v0.2.0/yomu-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b06c441ed916d2a1a3d2a8a65b60519952a70af241e8e3e1e117ff11cbb45458"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/choplin/yomu/releases/download/v0.2.0/yomu-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "68e92018fcc5427f04a6412011b3a0879172d238f127cd2cf67c4475b3249247"
+    end
   end
   license "MIT"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":     {},
-    "x86_64-apple-darwin":      {},
-    "x86_64-unknown-linux-gnu": {},
+    "aarch64-apple-darwin":      {},
+    "aarch64-unknown-linux-gnu": {},
+    "x86_64-apple-darwin":       {},
+    "x86_64-unknown-linux-gnu":  {},
   }.freeze
 
   def target_triple
@@ -44,6 +51,9 @@ class Yomu < Formula
       bin.install "yomu"
     end
     if OS.mac? && Hardware::CPU.intel?
+      bin.install "yomu"
+    end
+    if OS.linux? && Hardware::CPU.arm?
       bin.install "yomu"
     end
     if OS.linux? && Hardware::CPU.intel?
