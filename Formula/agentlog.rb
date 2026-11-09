@@ -1,24 +1,24 @@
 class Agentlog < Formula
   desc "A local browser for AI coding-agent session history"
-  homepage "https://github.com/choplin/agentlog"
+  homepage "https://github.com/choplin/taiwalog"
   version "0.1.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/choplin/agentlog/releases/download/v0.1.0/agentlog-aarch64-apple-darwin.tar.xz"
+      url "https://github.com/choplin/taiwalog/releases/download/v0.1.0/agentlog-aarch64-apple-darwin.tar.xz"
       sha256 "c150dfbd41d29c25921edc32f64a82028d24b2fdeb373ddc18f3af1e9603c757"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/choplin/agentlog/releases/download/v0.1.0/agentlog-x86_64-apple-darwin.tar.xz"
+      url "https://github.com/choplin/taiwalog/releases/download/v0.1.0/agentlog-x86_64-apple-darwin.tar.xz"
       sha256 "3b055e063e5948b11f133ff7b73f632a59a893332e89dfcbb462ce0e21ec7101"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/choplin/agentlog/releases/download/v0.1.0/agentlog-aarch64-unknown-linux-musl.tar.xz"
+      url "https://github.com/choplin/taiwalog/releases/download/v0.1.0/agentlog-aarch64-unknown-linux-musl.tar.xz"
       sha256 "8f4187ed1d97543526a118af0c00083284baa0746f22bebe5929c0662de91090"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/choplin/agentlog/releases/download/v0.1.0/agentlog-x86_64-unknown-linux-musl.tar.xz"
+      url "https://github.com/choplin/taiwalog/releases/download/v0.1.0/agentlog-x86_64-unknown-linux-musl.tar.xz"
       sha256 "06ba615bbbb9298a939aa065a5157041bf787dacef2fc470d69f44b90b0e7cfe"
     end
   end
